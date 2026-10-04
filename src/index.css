@@ -1,0 +1,51 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+
+body {
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+html.light body {
+  background-color: #ffffff;
+  color: #222222;
+}
+
+html.dark body {
+  background-color: #222222;
+  color: #ffffff;
+}
+
+.mode-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.mode-container button {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  background-color: #333;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.mode-container button:hover {
+  opacity: 0.8;
+}
+
+html.dark .mode-container button {
+  background-color: white;
+  color: #222;
+}
